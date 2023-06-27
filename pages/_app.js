@@ -1,5 +1,8 @@
-import '@/styles/globals.css'
+import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  //* codigo para la anexacion de paginas con layouts
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(<Component {...pageProps} />);
+  // return <Component {...pageProps} />;
 }
