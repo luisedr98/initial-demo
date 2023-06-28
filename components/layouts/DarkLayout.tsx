@@ -1,4 +1,6 @@
-const styles = {
+import { CSSProperties, FC, ReactNode } from "react";
+
+const styles: CSSProperties = {
   backgroundColor: "#244075",
   color: "white",
   padding: "5px",
@@ -9,7 +11,11 @@ const styles = {
   gap: "2px",
 };
 
-export const DarkLayout = ({ children }) => {
+interface Props {
+  children: ReactNode;
+}
+
+export const DarkLayout: FC<Props> = ({ children }) => {
   return (
     <div style={styles}>
       <h3>Dark- Layout</h3>

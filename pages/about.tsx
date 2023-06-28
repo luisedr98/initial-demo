@@ -1,8 +1,5 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-import { MainLayout } from "@/components/layouts/MainLayout";
+import { FC } from "react";
+import { MainLayout } from "../components/layouts/MainLayout";
 import Link from "next/link";
 
 export default function AboutComponent() {

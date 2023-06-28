@@ -1,7 +1,13 @@
+import { FC } from "react";
 import styles from "./Navbar.module.css";
 import { ActiveLink } from "./ActiveLink";
 
-const menuItems = [
+interface Links {
+  text: string;
+  href: string;
+}
+
+const menuItems: Links[] = [
   {
     text: "Home",
     href: "/",
@@ -20,7 +26,7 @@ const menuItems = [
   },
 ];
 
-export const Navbar = () => {
+export const Navbar: FC = () => {
   return (
     <nav className={styles["navbar-container"]}>
       {menuItems.map((item) => (

@@ -3,10 +3,16 @@ import { Inter } from "next/font/google";
 import { Navbar } from "../Navbar";
 import Image from "next/image";
 import styles from "./MainLayout.module.css";
+import { ReactNode, FC } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const MainLayout = ({ children, title }) => {
+interface Props {
+  children: ReactNode;
+  title: string;
+}
+
+export const MainLayout: FC<Props> = ({ children, title }) => {
   return (
     <>
       <Head>
